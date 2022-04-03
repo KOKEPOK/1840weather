@@ -1,6 +1,9 @@
 FROM python
-RUN mkdir -p /Projects/1840weather/
-WORKDIR /Projects/1840weather/
+RUN mkdir -p /Projects/1840pogoda/
+WORKDIR /Projects/1840pogoda/
+#ADD weather_api.py /
+#EXPOSE 8000
+#WORKDIR /usr/src/app
 
 COPY . .
 
