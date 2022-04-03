@@ -1,10 +1,6 @@
-FROM python
-RUN mkdir -p /Projects/1840pogoda/
-WORKDIR /Projects/1840pogoda/
-
-#EXPOSE 8000
-#WORKDIR /usr/src/app
-
+FROM python:3
 COPY . .
-
-CMD ["python", "weather_api.py"]
+WORKDIR /1840weather
+RUN pip install -r requirements.txt
+ENTRYPOINT ["python"]
+CMD ["weather_api.py"]
